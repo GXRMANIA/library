@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    font-size: 30px;
+    gap: 25px;
+    background-color: #18ff6d;
+    color: rgb(56, 50, 50);
+}
+.header span {
+    font-size: 50px;
+}
+
+.new-book-btn-container {
+    padding: 30px;
+}
+
+.books {
+    padding: 30px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+}
+
+.book .title, .book .author, .book .pages, .book form {
+    display: flex;
+}
+.book .title p:nth-child(1), .book .author p:nth-child(1), .book .pages p:nth-child(1), .book form label:nth-child(1) {
+    flex: 1;
+    font-weight: bolder;
+}
+
+.book {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;    padding: 35px 20px 20px 20px;
+    border-radius: 13px;
+    position: relative;
+}
+
+.book::before {
+    content: "";
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    border-radius: 2px;
+    width: 10px;
+    background-color: #18ff6d;
+    position: absolute;
+}
+
+.book .delete {
+    background-color: rgba(250, 178, 178, 0.671);
+    height: 16px;
+    font-size: 13px;
+    width: 16px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.new-book-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 23px ;
+}
+
+.new-book-form input[type="text"], .new-book-form input[type="number"] {
+    padding: 3px;
+    border: 1px solid #bebebe88;
+    border-radius: 7px;
+}
+
+.new-book-form form{
+    display: flex;
+    gap: 5px;
+    top: 50px;
+    flex-direction: column;
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.new-book-form form > div {
+    display: flex;
+    gap: 20px;
+}
+.new-book-form form > div label:first-child {
+    flex-grow: 1;
+}
+
+.inactive {
+    display: none;
+}

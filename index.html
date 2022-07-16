@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&display=swap" rel="stylesheet">
+    <title>Library</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <span class="material-symbols-outlined">
+            auto_stories
+        </span>
+        <h1>My Library</h1>
+    </div>
+
+    <div class="new-book-btn-container">
+        <button class="newBookBtn">New Book</button>
+    </div>
+
+    <div class="new-book-form inactive">
+        <form action="#">
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div>
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author">
+            </div>
+            <div>
+                <label for="pages">Author: </label>
+                <input type="number" name="pages" id="pages">
+            </div>
+            <div>
+                <label for="read">Already read?</label>
+                <input type="checkbox" name="read" id="read">
+            </div>
+            <div>
+                <label for="add"></label>
+                <button class="add">Add</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <div class="books">
+       
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
