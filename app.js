@@ -88,12 +88,21 @@ newBookBtn.addEventListener("click", () => {
 
     addBookBtn.addEventListener("click", (e) => {
         e.preventDefault()
-        const titleInput = document.querySelector("#title").value;
-        const authorInput = document.querySelector("#author").value;
-        const pagesInput = document.querySelector("#pages").value;
+        const titleInput = document.querySelector("#title")
+        const authorInput = document.querySelector("#author");
+        const pagesInput = document.querySelector("#pages");
+
+        if(!titleInput.checkValidity()) {
+            titleInput.setCustomValidity("Please fill in an Title..")
+            titleInput.reportValidity();
+            return;
+        } 
+        titleInput.setCustomValidity("")
+
+
         const readInput = document.querySelector("#read").checked;
         
-        addBookToLibrary(titleInput, authorInput, pagesInput, readInput)
+        addBookToLibrary(titleInput.value, authorInput.value, pagesInput.value, readInput)
         displayLibrary()
     })
         
